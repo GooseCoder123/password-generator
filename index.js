@@ -1,5 +1,3 @@
-import "Math"
-
 const characters = [
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
@@ -9,16 +7,20 @@ const characters = [
     '!', '#', '$', '%', '&', '*', '+', '-', '?', '@', '_'
 ]
 
-let display = document.getElementById("display")
-let num_character = document.getElementById("num_characters")
-let generate = document.getElementById("generate_btn")
+const display = document.getElementById("display")
 
 function generatePassword(num_characters) {
     let password = ""
-    for (let i = 0; i < 12; i++) {
-        let char = characters[Math.random() * 73]
+    for (let i = 0; i < num_characters; i++) {
+        let char = characters[Math.floor(Math.random() * characters.length) ]
         password += char
     }
     return password
 }
 
+function displayPassword() {
+    const num_character = parseInt(document.getElementById("num_characters").value)
+    
+    let password = generatePassword(num_character)
+    display.value = password
+}

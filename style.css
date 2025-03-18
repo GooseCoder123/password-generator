@@ -1,0 +1,66 @@
+body{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(250, 237, 205);    
+}
+
+.main{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(212, 163, 115);
+    height: 370px;
+    width: 350px;
+}
+
+h1{
+    font-size: 33px;
+    font-family: Consolas; 
+}
+
+#display{
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    font-family: Consolas;
+    background-color: rgb(254, 250, 224);
+}
+
+#num_characters{
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    font-family: Consolas;
+    text-align: center;
+    background-color: rgb(254, 250, 224);
+}
+
+#generate_btn{
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 250px;
+    font-size: 30px;
+    font-family: Consolas;
+    background-color: rgb(204, 213, 174);
+}
+
+#generate_btn:hover {
+    background-color: rgb(193, 201, 164);
+}
+
+#generate_btn:active {
+    background-color: rgb(176, 184, 151);
+}
