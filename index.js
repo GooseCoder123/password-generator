@@ -21,6 +21,12 @@ function generatePassword(num_characters) {
 function displayPassword() {
     const num_character = parseInt(document.getElementById("num_characters").value)
     
-    let password = generatePassword(num_character)
-    display.value = password
+    if (num_character < 8) {
+        alert("Your password must have at least 8 characters!")
+    } else if (num_character > 32) {
+        alert("Your password can't be more than 32 characters long!")
+    } else {
+        let password = generatePassword(num_character)
+        display.value = password
+    }
 }
