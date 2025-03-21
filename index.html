@@ -11,6 +11,19 @@
         <h1>Password Generator</h1>
         <input id="display" readonly>
         <input type="number" id="num_characters" min="8", max="32", value="16">
+        
+        <label class="container">Big letters
+            <input type="checkbox" checked="checked" id="big_letters">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Numbers
+            <input type="checkbox" checked="checked" id="numbers">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Special characters
+            <input type="checkbox" checked="checked" id="special_char">
+            <span class="checkmark"></span>
+        </label>
         <button onclick="displayPassword()" id="generate_btn">Generate</button>
     </div>
     <script src="index.js"></script>

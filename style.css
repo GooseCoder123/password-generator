@@ -17,7 +17,7 @@ body{
     justify-content: space-around;
     align-items: center;
     background-color: rgb(212, 163, 115);
-    height: 370px;
+    height: 430px;
     width: 350px;
 }
 
@@ -64,3 +64,58 @@ h1{
 #generate_btn:active {
     background-color: rgb(176, 184, 151);
 }
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: Consolas;
+    user-select: none; /* Combine user-select properties */
+}
+  
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.checkmark {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(254, 250, 224); /* Use hex color for readability */
+}
+  
+.container:hover input ~ .checkmark {
+    background-color: rgb(250, 237, 205);
+}
+  
+.container input:checked ~ .checkmark {
+    background-color: rgb(109, 192, 213);
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg); /* Combine transform properties */
+}
+  
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
